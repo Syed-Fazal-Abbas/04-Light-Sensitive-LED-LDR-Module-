@@ -28,29 +28,30 @@ printed on the Serial Monitor for testing/debugging.
 
 ## Code
 
-​```cpp
+```cpp
 // Pin Definitions
 const int ldrPin = 2; 
-const int ledPin = 9; 
+const int ledPin = 9;
 
-void setup() {
-  pinMode(ldrPin, INPUT);  
-  pinMode(ledPin, OUTPUT);  
-  Serial.begin(9600);       
+void setup() { 
+  pinMode(ldrPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
 }
 
-void loop() {
+void loop() { 
   int ldrState = digitalRead(ldrPin); 
-  Serial.println(ldrState);          
-  if (ldrState == HIGH) {
-    digitalWrite(ledPin, HIGH);
-  } else {                         
-    digitalWrite(ledPin, LOW);    
+  Serial.println(ldrState);
+  
+  if (ldrState == HIGH) { 
+    digitalWrite(ledPin, HIGH); 
+  } else {
+    digitalWrite(ledPin, LOW);
   }
 
   delay(100); 
 }
-​```
+```
 
 ## Demo Video
 [https://youtu.be/a2671XZhK1E?si=tKx_UNihbLAuwmll]
